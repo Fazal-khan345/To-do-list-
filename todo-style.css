@@ -1,0 +1,330 @@
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #000000;
+  --text-light: #222;
+  --text-dark: #eee;
+  --accent: #4caf50;
+  --accent-hover: #45a049;
+  --delete: #ff4b4b;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 50px 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+}
+
+.light-mode {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+}
+
+#themeToggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.nav{
+    position: fixed;
+    top: 7px;
+    left: 15px;
+    width: 50%;
+}
+
+.nav a{
+   
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 7px;
+    font-size: 20px;
+}
+
+.nav a:hover{
+    color: whitesmoke;
+}
+
+.container {
+  background: var(--bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  max-width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  padding: 10px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+ul {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 6px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li span {
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+li button.deleteBtn {
+  background: var(--delete);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.stats {
+  margin-top: 20px;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--accent);
+  text-align: center;
+}
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #000000;
+  --text-light: #222;
+  --text-dark: #eee;
+  --accent: #4caf50;
+  --accent-hover: #45a049;
+  --delete: #ff4b4b;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 50px 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+}
+
+.light-mode {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+}
+
+#themeToggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.container {
+  background: var(--bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  max-width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  padding: 10px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+ul {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 6px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li span {
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+li button.deleteBtn {
+  background: var(--delete);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.stats {
+  margin-top: 20px;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--accent);
+  text-align: center;
+}
+
+.amount-group {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.amount-group .rupee-icon {
+  font-size: 1.2rem;
+  padding: 8px 10px;
+  background-color: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.amount-group input[type="text"], .amount-group input[type="number"] {
+  flex: 1;
+}
+
+#exportBtn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#exportBtn:hover {
+  background: #1976d2;
+}
+
+.grocery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+.grocery-item span {
+  flex: 1;
+  cursor: pointer;
+}
+.grocery-item.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.grocery-item button {
+  background: var(--delete);
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grocery Manager</title>
+  <link rel="stylesheet" href="grocery-style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" />
+  <meta name="theme-color" content="#4caf50" />
+</head>
+
+
+<style>
+    :root {
+  --bg-light: #ffffff;
+  --bg-dark: #000000;
+  --text-light: #222;
+  --text-dark: #eee;
+  --accent: #4caf50;
+  --accent-hover: #45a049;
+  --delete: #ff4b4b;
+}
+   
+
+.navbar {
+  position: relative;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius:10px 10px 0 0;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Menu styles */
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #4CAF50;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu.show {
+  max-height: 200px;
+}
+
+.menu li {
+  border-top: 1px solid #66bb6a;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background-color: #388e3c;
+}
+
+.nav{
+    position: fixed;
+    top: 7px;
+    left: 15px;
+    width: 50%;
+}
+
+.nav a{
+   
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 7px;
+    font-size: 20px;
+}
+
+.nav a:hover{
+    color: whitesmoke;
+}
+
+
+/* Hamburger X animation */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+</style>
+
+<body class="light-mode">
+    
+     <div class="nav">
+     
+      <nav class="navbar">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html"><i class="fas fa-tasks"></i> 📝To-Do</a></li>
+      <li><a href="grocery.html"><i class="fas fa-shopping-cart"></i> 🛒Grocery</a></li>
+    </ul>
+  </nav>
+     
+ </div>   
+    
+  <button id="themeToggle">🌙</button>
+  <div class="container">
+    <h1>🛒 Grocery Manager</h1>
+    <div class="input-group amount-group">
+      <input type="text" id="groceryItem" placeholder="Grocery Item Name" />
+      <span class="rupee-icon">₹</span>
+      <input type="number" id="amountInput" placeholder="Amount" />
+      <button id="addGroceryBtn">Add Grocery</button>
+    </div>
+    <div class="grocery-stats" id="groceryStats"></div>
+    <button id="exportGroceryBtn">📁 Export CSV</button>
+  </div>
+  <script src="grocery-script.js"></script>
+  
+    <script>
+      const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  menu.classList.toggle('show');
+});
+  </script>
+</body>
+</html>
